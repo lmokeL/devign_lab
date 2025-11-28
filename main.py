@@ -8,7 +8,6 @@
         $ python taskflows.py -e -pS
 """
 import faulthandler
-
 faulthandler.enable()
 
 import argparse
@@ -137,6 +136,7 @@ def embed_task():
         gc.collect()
     print("Saving w2vmodel.")
     w2vmodel.save(f"{PATHS.w2v}/{FILES.w2v}")
+    print(f"{PATHS.w2v}/{FILES.w2v}")
 
 
 def process_task(stopping, test_only=False):
